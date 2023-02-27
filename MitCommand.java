@@ -9,8 +9,8 @@ public class MitCommand {
         this.directory = new File(path);
     }
 
-    void list(String path){
-        Arrays.stream(directory.listFiles()).forEach(System.out::println);
+    void list(){
+        Arrays.stream(directory.listFiles()).forEach(f -> System.out.println(f.getName() + " " + f.length()/1000 + "KB"));
     }
 
     void hash(String path){
