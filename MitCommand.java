@@ -13,8 +13,8 @@ public class MitCommand {
         Arrays.stream(directory.listFiles()).forEach(f -> System.out.println(f.getName() + " " + f.length()/1000 + "KB"));
     }
 
-    void hash(String path){
-        Arrays.stream(directory.listFiles()).forEach(i -> System.out.println(getSHA256(i)));
+    void hash(){
+        Arrays.stream(directory.listFiles()).forEach(f -> System.out.println(getSHA256(f)));
     }
 
     String getSHA256(File file){
